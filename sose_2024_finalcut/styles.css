@@ -1,0 +1,180 @@
+@font-face {
+  font-family: "ABCMonumentGroteskMono";
+  src: url("fonts/ABCMonumentGroteskMono Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "ABCMonumentGroteskMono", Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.button-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  z-index: 1000;
+}
+
+button {
+  font-family: "ABCMonumentGroteskMono", Arial, sans-serif;
+  background: rgb(130, 130, 130);
+  background: linear-gradient(
+    90deg,
+    rgba(130, 130, 130, 1) 1%,
+    rgba(200, 214, 213, 1) 22%,
+    rgba(234, 255, 253, 1) 41%,
+    rgba(255, 255, 255, 1) 65%,
+    rgba(191, 203, 202, 1) 100%
+  );
+
+  color: rgb(51, 51, 51);
+  border: 0.5px solid rgb(51, 51, 51);
+
+  width: 14.28%;
+  height: 50px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-top: 50px;
+}
+
+.gallery {
+  background: rgb(130, 130, 130);
+  background: linear-gradient(
+    0deg,
+    rgba(130, 130, 130, 1) 0%,
+    rgba(183, 193, 192, 1) 5%,
+    rgba(200, 214, 213, 1) 11%,
+    rgba(252, 255, 234, 1) 52%,
+    rgba(255, 255, 255, 1) 71%,
+    rgba(191, 203, 202, 1) 100%
+  );
+
+  border: 0.7px solid rgb(51, 51, 51);
+  padding: 20px;
+  display: none;
+  position: relative;
+  height: 12vh;
+}
+
+.gallery h2 {
+  margin-top: 0;
+  font-size: 15px;
+  color: rgb(51, 51, 51);
+}
+
+.scroll-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  height: calc(100% - 40px);
+}
+
+.scroll-content {
+  display: flex;
+  gap: 10px;
+  height: 100%;
+}
+
+.scroll-content img,
+.scroll-content video {
+  max-height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+.scroll-content img:focus,
+.scroll-content video:focus,
+.popup img:focus {
+  outline: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.popup-btn {
+  position: fixed;
+  bottom: 20px;
+  width: 100px;
+  height: 50px;
+
+  color: rgb(51, 51, 51);
+
+  border: 1px solid rgb(51, 51, 51);
+
+  font-size: 16px;
+}
+
+#left-popup-btn {
+  left: 0px;
+  bottom: 0px;
+  font-size: 15px;
+  border: 1px solid rgb(51, 51, 51);
+}
+
+#right-popup-btn {
+  right: 0px;
+  bottom: 0px;
+  font-size: 15px;
+  border: 1px solid rgb(51, 51, 51);
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  left: 5vw;
+  bottom: 100px;
+  width: 300px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(51, 51, 51);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+
+.popup-header {
+  width: 100%;
+  height: 15px;
+  font-size: 12px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(51, 51, 51);
+}
+
+.popup img {
+  max-width: 100%;
+  max-height: 100%;
+  outline: none;
+}
+
+.popup img:focus {
+  outline: none;
+}
+
+.resize-handle {
+  width: 100%;
+  height: 20px;
+  background-color: rgba(51, 51, 51, 0);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
